@@ -18,19 +18,31 @@ from tg_bot.modules.helper_funcs.chat_status import is_user_admin
 from tg_bot.modules.helper_funcs.misc import paginate_modules
 
 PM_START_TEXT = """
-*Hello* {},*My Name is* *{}*! 
+*Hello.. നമസ്കാരം* {},*എന്റെ പേര്* *{}*! 
 
-```You You Can Add any kind of Filters to This Bot!```
+*😁😁നിങ്ങൾക്ക് എന്നിൽ ഏത് തരം Filters വേണമെങ്കിലും Add ചെയ്യാവുന്നതാണ്! പക്ഷെ എന്നെ നിങ്ങൾക്ക് വേറെ ഗ്രൂപ്പുകളിൽ Add ചെയ്യാൻ പറ്റില്ല.😁😁*
 
-*Channel:© @KL35Cinemaz*
+*😘♥️ഞാൻ KL-35 Cinemas ഗ്രൂപ്പിൽ മാത്രമേ Work ചെയ്യുകയുള്ളൂ.. നിങ്ങൾക്കും എന്റെ ഗ്രൂപ്പിലും ചാനലുകളിലും ചേരാവുന്നതാണ്.♥️😘*
 
-/help for more details..
+*ഞാൻ*
+
+*Group:© @KL35Cinemas*
+*Main Channel:© @KL35Cinemaz*
+*Hollywood Channel:© @KL35Hollywood*
+*Matinee Channel:© @KL35Matinee*
+*Subtitles Channel:© @KL35Subtitles*
+
+*സിനിമ കമ്മ്യൂണിറ്റി അഡ്മിൻ ആണ്*
+
+/help command കൊടുത്താൽ ആവിശ്യമായ കമാന്റുകൾ ലഭിക്കും..
+[❤️My Group❤️](buttonurl:https://t.me/KL35Cinemas)
+[🔰My Channel🔰](buttonurl:https://t.me/KL35Cinemaz)
 """
 
 HELP_STRINGS = """
 Hello! my name *{}*.
 
-*Main Available Commands* are Below:
+*Main Available Commands* താഴെ ഉണ്ട്:
 
 All of the following commands  / can  be used...
 
@@ -38,10 +50,9 @@ And the following:
 """.format(dispatcher.bot.first_name, "" if not ALLOW_EXCL else "\nഈ പറഞ്ഞിരിക്കുന്ന commandകൾ എല്ലാം  / അല്ലെങ്കിൽ ! വെച്ച് ഉപയോഗിക്കാവുന്നതാണ്...\n")
 
 DONATE_STRING = """Heya, glad to hear you want to donate!
-It took lots of work for [my creator](t.me/sonoflars) to get me to where I am now, and every donation helps \
+It took lots of work for [my creator](t.me/KL35Palakaaran) to get me to where I am now, and every donation helps \
 motivate him to make me even better. All the donation money will go to a better VPS to host me, and/or beer \
-(see his bio!). He's just a poor student, so every little helps!
-There are two ways of paying him; [PayPal](paypal.me/PaulSonOfLars), or [Monzo](monzo.me/paulnionvestergaardlarsen)."""
+(see his bio!). He's just a poor student, so every little helps Motivate Him!"""
 
 IMPORTED = {}
 MIGRATEABLE = []
