@@ -145,17 +145,17 @@ def connected(bot, update, chat, user_id, need_admin=True):
 
 
 __help__ = """
-Actions are available with connected groups:
- • View and edit notes
- • View and edit filters
- • More in future!
+ഗ്രൂപ്പുകൾ ആയിട്ട് Connect ചെയ്‌താൽ പിഎമ്മിൽ ചെയ്യാൻ പറ്റുന്ന കാര്യങ്ങൾ:
+ • നോട്ടുകൾ കാണുകയും Edit ചെയ്യുകയും ചെയ്യാം.
+ • ഫിൽറ്ററുകൾ കാണുകയും Edit ചെയ്യുകയും ചെയ്യാം.
+ • Connect ചെയ്ത് കഴിയുമ്പോൾ ബാക്കി കാണാം!
 
- - /connect <chatid>: Connect to remote chat
- - /disconnect: Disconnect from chat
+ - /connect <chatid>: ഒരു Remote chat Connect ചെയ്യാൻ.
+ - /disconnect: ഒരു ചാറ്റിൽ നിന്ന് Disconnect ചെയ്യാൻ.
  - /allowconnect on/yes/off/no: Allow connect users to group
 """
 
-__mod_name__ = "Connections"
+__mod_name__ = "🔗Connections🔗"
 
 CONNECT_CHAT_HANDLER = CommandHandler("connect", connect_chat, allow_edited=True, pass_args=True)
 DISCONNECT_CHAT_HANDLER = CommandHandler("disconnect", disconnect_chat, allow_edited=True)
