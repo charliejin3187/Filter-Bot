@@ -367,14 +367,14 @@ def getsticker(bot: Bot, update: Update):
 
 # /ip is for private use
 __help__ = """
- - /id: get the current group id. If used by replying to a message, gets that user's id.
- - /info: get information about a user.
- - /markdownhelp: quick summary of how markdown works in telegram - can only be called in private chats.
- - /stickerid: reply to a sticker and get sticker id of that.
- - /getsticker: reply to a sticker and get that sticker as .png and image. 
+ - /id: ഇപ്പോൾ Connect ചെയ്തിരിക്കുന്ന ഗ്രൂപ്പിന്റെ ID അല്ലെങ്കിൽ ഒരു യൂസറിന്റെ ID കിട്ടാൻ.
+ - /info: ഒരു യൂസറിനെ കുറിച്ചുള്ള Information കിട്ടാൻ.
+ - /markdownhelp: Markdown  എങ്ങനെയാണ് ടെലെഗ്രാമിൽ വർക്ക്‌ ചെയ്യുന്നത് എന്ന് അറിയാൻ - Private ചാറ്റുകളിൽ മാത്രമേ ഈ Command Work ചെയ്യുകയുള്ളൂ.
+ - /stickerid: ഒരു സ്റ്റിക്കറിന് Reply ആയി /stickerid എന്ന് കൊടുത്താൽ ആ സ്റ്റിക്കറിന്റെ ID ലഭിക്കും.
+ - /getsticker: ഒരു സ്റ്റിക്കറിന് Reply ആയി /getsticker എന്ന് കൊടുത്താൽ ആ .png ആയിട്ടും image ആയിട്ടും ലഭിക്കും. 
 """
 
-__mod_name__ = "Misc"
+__mod_name__ = "❓Misc❓"
 
 ID_HANDLER = DisableAbleCommandHandler("id", get_id, pass_args=True)
 IP_HANDLER = CommandHandler("ip", get_bot_ip, filters=Filters.chat(OWNER_ID))
