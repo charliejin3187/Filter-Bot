@@ -33,8 +33,8 @@ def post_telegraph(bot: Bot, update: Update, args: List[str]):
 
 
 __help__ = """
-○ My Name : *Filter Bot*
-○ Creator : [KL35Palakaaran](https://t.me/KL35Palakaaran)
+○ എന്റെ പേര് : *Filter Bot*
+○ Creator: [KL35Palakaaran](https://t.me/KL35Palakaaran)
 ○ Credits : `Everyone in this journey`
 ○ Language : Python3
 ○ Library : [Pyrogram asyncio 0.16.1](https://docs.pyrogram.org/)
