@@ -269,9 +269,9 @@ def __chat_settings__(chat_id, user_id):
 
 
 __help__ = """
- - /filters: list all active filters in this chat.
+ - /filters: ഒരു ഗ്രൂപ്പിൽ ഉള്ള എല്ലാ ഫിൽറ്ററുകളുടെയും List കാണാൻ.
 
-*Admin only:*
+*Admin മാത്രം:*
  - /filter <keyword> <reply message>: add a filter to this chat. The bot will now reply that message whenever 'keyword'\
 is mentioned. If you reply to a sticker with a keyword, the bot will reply with that sticker. NOTE: all filter \
 keywords are in lowercase. If you want your keyword to be a sentence, use quotes. eg: /filter "hey there" How you \
@@ -279,7 +279,7 @@ doin?
  - /stop <filter keyword>: stop that filter.
 """
 
-__mod_name__ = "Filters"
+__mod_name__ = "📑Filters📑"
 
 FILTER_HANDLER = CommandHandler("filter", filters)
 STOP_HANDLER = CommandHandler("stop", stop_filter)
