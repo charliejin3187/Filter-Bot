@@ -70,6 +70,14 @@
     "ALLOW_EXCL": {
       "description": "Whether to allow using exclamation marks ! for commands as well as /.",
       "value": "True"
+    },
+    "TG_GROUP": {
+      "description": "Telegram Group Link",
+      "value": "https://t.me/KL35Cinemas"
+    },
+    "TG_CHANNEL": {
+      "description": "Telegram Channel Link",
+      "value": "https://t.me/KL35Cinemaz"
     }
   },
   "addons": [
