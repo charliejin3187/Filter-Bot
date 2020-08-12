@@ -140,7 +140,15 @@ def start(bot: Bot, update: Update, args: List[str]):
             first_name = update.effective_user.first_name
             update.effective_message.reply_text(
                 PM_START_TEXT.format(escape_markdown(first_name), escape_markdown(bot.first_name), OWNER_ID),
-                parse_mode=ParseMode.MARKDOWN,reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton(text="😬Add Groups😬", url="t.me/{}?startgroup=true".format(bot.username))(text="❤️My Group❤️", url="t.me/{}".format(TG_GROUP))(text="🧡My Channel🧡", url="t.me/{}".format(TG_CHANNEL))]])                                
+                inline_keyboard = []
+                   inline_keyboard.append([
+                      pyrogram.InlineKeyboardButton(
+                        text="My Group",
+                        url="https://t.me/KL35Cinemas"
+                      )
+                ])
+                reply_markup = pyrogram.InlineKeyboardMarkup(inline_keyboard)
+                reply_markup=reply_markup                           
     else:
         update.effective_message.reply_text("")
 
