@@ -390,3 +390,7 @@ async def _(event):
     canvas.save('sticker.webp')
     await event.client.send_file(event.chat_id, "sticker.webp", reply_to=event.reply_to_msg_id)
     os.remove('sticker.webp')
+    
+    QUOTES_HANDLER = DisableAbleCommandHandler("q", quotes)
+    
+    dispatcher.add_handler(QUOTES_HANDLER)
