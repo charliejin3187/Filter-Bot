@@ -4,9 +4,9 @@
 
 My New Updates In This [Channel](https://t.me/DX_Botz)
 
-Our Beta [Filter Bot](https://t.me/Filters_Robot).
+Our [Filter Bot](https://t.me/Tovino_Ichayan_Bot).
 
-Alternatively, [find me on telegram](https://t.me/D_ar_k_Angel)! (Keep all support questions in the support chat, where more people can help you.)
+Alternatively, [find me on telegram](https://t.me/KL35Palakaaran)! (Keep all support questions in the support chat, where more people can help you.)
 
 ## You can also tap the Deploy To Heroku button below to deploy straight to Heroku!
 
