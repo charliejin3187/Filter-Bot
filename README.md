@@ -170,6 +170,6 @@ through the `/stats` command, which is only available to the bot owner.
 
 ## Credits
 
-These Bot Is Forked From D_ar_k_Angel's Filter Bot.
-So Special Thanks To [D_ar_k_Angel](https://t.me/Charlie_Jin).
+These Bot Is Forked From [D_ar_k_Angel](https://t.me/D_ar_k_Angel)'s Filter Bot.
+So Special Thanks To [D_ar_k_Angel](https://t.me/D_ar_k_Angel).
 And [Charlie_Jin](https://t.me/Charlie_Jin) Helped Me To Edit This Code. So Thanking You [Charlie_Jin](https://t.me/Charlie_Jin) For Helping Me To Edit This Code.
