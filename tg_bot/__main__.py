@@ -18,30 +18,23 @@ from tg_bot.modules.helper_funcs.chat_status import is_user_admin
 from tg_bot.modules.helper_funcs.misc import paginate_modules
 
 PM_START_TEXT = """
-*Hello 👋.. നമസ്കാരം 🙏* {},*എന്റെ പേര്* *{}*! 
+*Hello* {},*My Name is* *{}*! 
 
-*😁😁നിങ്ങൾക്ക് എന്നിൽ ഏത് തരം Filters വേണമെങ്കിലും Add ചെയ്യാവുന്നതാണ്! പക്ഷെ എന്നെ നിങ്ങൾക്ക് വേറെ ഗ്രൂപ്പുകളിൽ Add ചെയ്യാൻ പറ്റില്ല.😁😁*
+```You You Can Add any kind of Filters to This Bot!```
 
-*😘❤️ഞാൻ KL-35 Cinemas ഗ്രൂപ്പിൽ മാത്രമേ Work ചെയ്യുകയുള്ളൂ.. നിങ്ങൾക്കും എന്റെ ഗ്രൂപ്പിലും ചാനലുകളിലും ചേരാവുന്നതാണ്.❤️😘*
+*Channel:© @DX_Botz*
 
-*ഞാൻ*
-
-*❤️Group:© @KL35Cinemas❤️*
-*🧡Main Channel:© @KL35Cinemaz🧡*
-*💛Hollywood Channel:© @KL35Hollywood💛*
-*💙Matinee Channel:© @KL35Matinee💙*
-*💜Subtitles Channel:© @KL35Subtitles💜*
-
-*🎬📽️🍿സിനിമ കമ്മ്യൂണിറ്റി അഡ്മിൻ ആണ്🍿📽️🎬*
-
-/help command കൊടുത്താൽ ആവിശ്യമായ കമാന്റുകൾ ലഭിക്കും.."""
+/help for more details..
+"""
 
 HELP_STRINGS = """
-Hello 👋.. നമസ്കാരം ! എന്റെ പേര് *{}*.
+Hello! my name *{}*.
 
-*Main ആയിട്ടുള്ള കാമാൻഡുകൾ താഴെ ഉണ്ട്*:
+*Main Available Commands* are Below:
 
-👇താഴെയുള്ള എല്ലാ കാമാൻഡുകളും / അല്ലെങ്കിൽ ! വെച്ചും Use ചെയ്യാവുന്നതാണ്...👇
+All of the following commands  / can  be used...
+
+And the following:
 """.format(dispatcher.bot.first_name, "" if not ALLOW_EXCL else "\nഈ പറഞ്ഞിരിക്കുന്ന commandകൾ എല്ലാം  / അല്ലെങ്കിൽ ! വെച്ച് ഉപയോഗിക്കാവുന്നതാണ്...\n")
 
 DONATE_STRING = """Heya, glad to hear you want to donate!
@@ -138,8 +131,7 @@ def start(bot: Bot, update: Update, args: List[str]):
             first_name = update.effective_user.first_name
             update.effective_message.reply_text(
                 PM_START_TEXT.format(escape_markdown(first_name), escape_markdown(bot.first_name), OWNER_ID),
-                parse_mode=ParseMode.MARKDOWN,reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton(text="😬 Add Groups 😬", url="http://t.me/Tovino_Ichayan_Bot?startgroup=true"), InlineKeyboardButton(text="❓ Help ❓", callback_data="help_back")],
-                                                                                 [InlineKeyboardButton(text="❤ My group ❤", url="https://t.me/KL35Cinemas"), InlinekeyboradButton(text="💛 My Channel 💛", url="https://t.me/KL35Cinemaz")]])
+                parse_mode=ParseMode.MARKDOWN,reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton(text="😬ADD YOUR GROUP😬", url="t.me/{}?startgroup=true".format(bot.username))]]))
     else:
         update.effective_message.reply_text("")
 
