@@ -18,9 +18,9 @@ from tg_bot.modules.helper_funcs.chat_status import is_user_admin
 from tg_bot.modules.helper_funcs.misc import paginate_modules
 
 PM_START_TEXT = """
-ഹായ് {} 🖐
-ഞാൻ {}
-ഒരു ഫിൽറ്റർ മാനേജർ ആണ്  😃
+*Hello* {},*എന്റെ പേര്* *{}*! 
+
+```You You Can Add any kind of Filters to This Bot!```
 
 *Group:© @KL35Cinemas*
 *Channel:© @KL35Cinemaz*
@@ -29,11 +29,13 @@ PM_START_TEXT = """
 """
 
 HELP_STRINGS = """
-1️⃣ *ഗ്രൂപ്പുകളിൽ ഫിൽറ്റർ ചേർക്കുവാൻ ബോട്ടിനെ ആദ്യം തെന്നെ ഗ്രൂപ്പും ആയി കണക്ട് ചെയ്യുക.*
+Hello! my name *{}*.
 
-2️⃣ *ശേഷം ഫിൽറ്ററുകൾ ആഡ് ചെയ്യുക.*
+*Main Available Commands* are Below:
 
-3️⃣ *(കണക്ട് ചെയ്യാതെ ചേർക്കുന്ന ഫിൽറ്ററുകൾ എല്ലാം തന്നെ ബോട്ടിന്റെ ലോക്കൽ ഫിൽറ്റെർസിൽ മാത്രമേ  വരികയുള്ളു.)
+All of the following commands  / can  be used...
+
+And the following:
 """.format(dispatcher.bot.first_name, "" if not ALLOW_EXCL else "\nഈ പറഞ്ഞിരിക്കുന്ന commandകൾ എല്ലാം  / അല്ലെങ്കിൽ ! വെച്ച് ഉപയോഗിക്കാവുന്നതാണ്...\n")
 
 DONATE_STRING = """Heya, glad to hear you want to donate!
@@ -130,8 +132,8 @@ def start(bot: Bot, update: Update, args: List[str]):
             first_name = update.effective_user.first_name
             update.effective_message.reply_text(
                 PM_START_TEXT.format(escape_markdown(first_name), escape_markdown(bot.first_name), OWNER_ID),
-                parse_mode=ParseMode.MARKDOWN,reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton(text="😬 Add Groups 😬", url="http://t.me/Tovino_Ichayan_Bot?startgroup=true"), InlineKeyboardButton(text="❓ Help ❓", url="http://t.me/Tovino_Ichayan_Bot?start=help")],
-                                                                                 [InlineKeyboardButton(text="❤ My group ❤", url="https://t.me/KL35Cinemas"), InlinekeyboradButton(text="💛 My Channel 💛", url="https://t.me/KL35Cinemaz")]]))
+                parse_mode=ParseMode.MARKDOWN,reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton(text="😬 Add Groups 😬", url="t.me/Tovino_Ichayan_Bot?startgroup=true"), InlineKeyboardButton(text="❓ Help ❓", url="t.me/Tovino_Ichayan_Bot?start=help")],
+                                                                                 [InlineKeyboardButton(text="❤ My group ❤", url="t.me/KL35Cinemas"), InlinekeyboradButton(text="💛 My Channel 💛", url="t.me/KL35Cinemaz")]]))
     else:
         update.effective_message.reply_text("")
 
