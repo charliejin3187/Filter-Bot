@@ -18,7 +18,7 @@ from tg_bot.modules.helper_funcs.chat_status import is_user_admin
 from tg_bot.modules.helper_funcs.misc import paginate_modules
 
 PM_START_TEXT = """
-*Hello* {},*എന്റെ പേര്* *{}*! 
+*Hello* {},*My Name Is* *{}*! 
 
 ```You You Can Add any kind of Filters to This Bot!```
 
@@ -29,7 +29,7 @@ PM_START_TEXT = """
 """
 
 HELP_STRINGS = """
-Hello! my name *{}*.
+Hello! My Name Is *{}*.
 
 *Main Available Commands* are Below:
 
@@ -132,8 +132,7 @@ def start(bot: Bot, update: Update, args: List[str]):
             first_name = update.effective_user.first_name
             update.effective_message.reply_text(
                 PM_START_TEXT.format(escape_markdown(first_name), escape_markdown(bot.first_name), OWNER_ID),
-                parse_mode=ParseMode.MARKDOWN,reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton(text="😬 Add Groups 😬", url="t.me/{}?startgroup=true".format(bot.username)), InlineKeyboardButton(text="❓ Help ❓", url="t.me/{}?start=help".format(bot.username))],
-                                                                                 [InlineKeyboardButton(text="❤ My group ❤", url="t.me/KL35Cinemas"), InlinekeyboradButton(text="💛 My Channel 💛", url="t.me/KL35Cinemaz")]]))
+                parse_mode=ParseMode.MARKDOWN,reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton(text="😬ADD YOUR GROUP😬", url="t.me/{}?startgroup=true".format(bot.username))]]))
     else:
         update.effective_message.reply_text("")
 
