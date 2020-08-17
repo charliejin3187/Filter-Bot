@@ -130,10 +130,14 @@ def start(bot: Bot, update: Update, args: List[str]):
 
         else:
             first_name = update.effective_user.first_name
+            buttons = InlineKeyboardMarkup(
+                [[InlineKeyboardButton(text="😬 Add Groups 😬", url="t.me/{}?startgroup=true".format(bot.username)), InlineKeyboardButton(text="❓ Help ❓", url="t.me/{}?start=help".format(bot.username))],
+                [InlineKeyboardButton(text="❤ My group ❤", url="t.me/KL35Cinemas"), InlineKeyboardButton(text="💛 My Channel 💛", url="t.me/KL35Cinemaz")]])
             update.effective_message.reply_text(
-                PM_START_TEXT.format(escape_markdown(first_name), escape_markdown(bot.first_name), OWNER_ID),
-                parse_mode=ParseMode.MARKDOWN,reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton(text="😬 Add Groups 😬", url="t.me/{}?startgroup=true".format(bot.username)), InlineKeyboardButton(text="❓ Help ❓", url="t.me/{}?start=help".format(bot.username))],
-                                                                                 [InlineKeyboardButton(text="❤ My group ❤", url="t.me/KL35Cinemas"), InlinekeyboradButton(text="💛 My Channel 💛", url="t.me/KL35Cinemaz")]]))
+                PM_START_TEXT).format(escape_markdown(first_name), escape_markdown(bot.first_name), OWNER_ID),
+                disable_web_page_preview=True,
+                parse_mode=ParseMode.MARKDOWN,
+                reply_markup=buttons)
     else:
         update.effective_message.reply_text("")
 
